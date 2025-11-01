@@ -149,6 +149,25 @@ fun FormDataDiri(modifier: Modifier
                         }
                     }
                 }
+                Text(text = "ALAMAT LENGKAP",modifier = Modifier.padding(all = 10.dp), fontWeight = FontWeight.Bold)
+                OutlinedTextField(
+                    value = "",
+                    onValueChange = {},
+                    singleLine = true,
+                    shape = MaterialTheme.shapes.large,
+                    label = { Text(text = "Alamat Lengkap")},
+                    modifier = Modifier.padding(10.dp)
+                        .fillMaxWidth(1f),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedTextColor = Color.Black,
+                        unfocusedTextColor = Color.DarkGray,
+                        focusedContainerColor = Color.White,
+                        unfocusedContainerColor = Color.White,
+                        focusedBorderColor = Color.Blue,
+                        unfocusedBorderColor = Color.Gray,
+                    )
+                )
+
 
         Row {
             gender.forEach { item ->
