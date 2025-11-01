@@ -75,6 +75,13 @@ fun FormDataDiri(modifier: Modifier
             }
 
             Spacer(modifier = Modifier.height(20.dp))
+
+            ElevatedCard(modifier = Modifier
+                .fillMaxWidth(1f)
+                .padding(all = 10.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                elevation = CardDefaults.cardElevation(defaultElevation = 50.dp)
+            ) {}
         }
 
         Row {
