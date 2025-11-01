@@ -123,8 +123,9 @@ fun FormDataDiri(modifier: Modifier
                                 )
                             }
                         }
-            }
-        }
+                    }
+                }
+                Text(text = "STATUS PERKAWINAN",modifier = Modifier.padding(all = 10.dp), fontWeight = FontWeight.Bold)
 
         Row {
             gender.forEach { item ->
