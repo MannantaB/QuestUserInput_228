@@ -1,8 +1,10 @@
 package com.example.prak4
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -44,10 +46,7 @@ fun FormDataDiri(modifier: Modifier
     val gender: List<String> = listOf("Laki-laki", "Perempuan")
     val status1: List<String> = listOf("Janda", "Lajang", "Duda")
 
-    Column(
-        modifier = Modifier.padding(top = 50.dp),
-        verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.CenterHorizontally
+    Box(modifier = Modifier.fillMaxSize()
     ) {
         OutlinedTextField(
             value = textNama,
