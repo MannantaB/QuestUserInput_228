@@ -128,14 +128,28 @@ fun FormDataDiri(modifier: Modifier
                 }
                 Text(text = "STATUS PERKAWINAN",modifier = Modifier.padding(all = 10.dp), fontWeight = FontWeight.Bold)
                 Column() {
-                    status.forEach { item ->
+                    status1.forEach { item ->
                         Column(
                             modifier = Modifier
                                 .selectable(
                                     selected = textStatus == item,
                                     onClick = {textStatus == item}
                                 )
-                        ){}
+                        ){
+                            Row() {
+                                RadioButton(
+                                    selected = textStatus == item,
+                                    onClick = {textStatus = item}
+                                )
+                                Text(
+                                    text = item,
+                                    modifier = Modifier.padding(top = 10.dp)
+                                )
+                            }
+                        }
+                    }
+                }
+
         Row {
             gender.forEach { item ->
                 Row(
