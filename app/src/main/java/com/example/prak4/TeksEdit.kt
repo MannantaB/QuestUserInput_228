@@ -81,7 +81,10 @@ fun FormDataDiri(modifier: Modifier
                 .padding(all = 10.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 elevation = CardDefaults.cardElevation(defaultElevation = 50.dp)
-            ) {}
+            ) {
+                Text(text = "NAMA LENGKAP",modifier = Modifier.padding(all = 10.dp), fontWeight = FontWeight.Bold)
+
+            }
         }
 
         Row {
