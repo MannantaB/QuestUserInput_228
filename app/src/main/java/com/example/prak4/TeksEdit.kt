@@ -1,5 +1,6 @@
 package com.example.prak4
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -48,16 +49,18 @@ fun FormDataDiri(modifier: Modifier
 
     Box(modifier = Modifier.fillMaxSize()
     ) {
-        OutlinedTextField(
-            value = textNama,
-            singleLine = true,
-            shape = MaterialTheme.shapes.large,
-            modifier = Modifier.width(width = 250.dp),
-            label = { Text(text = "Nama Lengkap") },
-            onValueChange = {
-                textNama = it
-            }
-        )
+        Column(modifier = Modifier
+            .padding(top = 50.dp)
+            .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ){
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color(0xFFB39DDB))
+                    .padding(vertical = 20.dp)
+            ){}
+        }
 
         Row {
             gender.forEach { item ->
