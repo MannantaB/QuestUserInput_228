@@ -35,6 +35,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import kotlin.collections.forEach
 
 @Composable
 fun FormDataDiri(modifier: Modifier
@@ -126,7 +127,15 @@ fun FormDataDiri(modifier: Modifier
                     }
                 }
                 Text(text = "STATUS PERKAWINAN",modifier = Modifier.padding(all = 10.dp), fontWeight = FontWeight.Bold)
-
+                Column() {
+                    status.forEach { item ->
+                        Column(
+                            modifier = Modifier
+                                .selectable(
+                                    selected = textStatus == item,
+                                    onClick = {textStatus == item}
+                                )
+                        ){}
         Row {
             gender.forEach { item ->
                 Row(
