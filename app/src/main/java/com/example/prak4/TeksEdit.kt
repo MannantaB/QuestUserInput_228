@@ -111,7 +111,18 @@ fun FormDataDiri(modifier: Modifier
                                     selected = textJK == item,
                                     onClick = { textJK == item }
                                 )
-                        ){}
+                        ){
+                            Row() {
+                                RadioButton(
+                                    selected = textJK == item,
+                                    onClick = { textJK = item }
+                                )
+                                Text(
+                                    text = item,
+                                    modifier = Modifier.padding(top = 10.dp)
+                                )
+                            }
+                        }
             }
         }
 
