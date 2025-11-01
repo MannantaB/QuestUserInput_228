@@ -103,7 +103,15 @@ fun FormDataDiri(modifier: Modifier
                 )
 
                 Text(text = "JENIS KELAMIN",modifier = Modifier.padding(all = 10.dp), fontWeight = FontWeight.Bold)
-
+                Column() {
+                    gender.forEach { item ->
+                        Column(
+                            modifier = Modifier
+                                .selectable(
+                                    selected = textJK == item,
+                                    onClick = { textJK == item }
+                                )
+                        ){}
             }
         }
 
