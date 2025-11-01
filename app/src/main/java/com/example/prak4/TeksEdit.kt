@@ -167,6 +167,17 @@ fun FormDataDiri(modifier: Modifier
                         unfocusedBorderColor = Color.Gray,
                     )
                 )
+                Button(
+                    modifier = Modifier
+                        .fillMaxWidth(fraction = 1f)
+                        .padding(all = 10.dp),
+                    onClick = {
+                        jenis = textJK
+                        status = textStatus
+                    }
+                ){
+                    Text(text = stringResource(id = R.string.submit))
+                }
 
 
         Row {
